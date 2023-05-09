@@ -1,0 +1,247 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+font-family: 'Playfair Display', serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #121212;
+}
+
+a img {
+    width: 127px;
+}
+
+.agendar_btn {
+    width: 100px;
+    height: 45%;
+    padding: 10px;
+    font-size: 18px;
+    opacity: 70%;
+    border-radius: 5px;
+    -webkit-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .agendar_btn:hover {
+    transition: .5s ease-in-out;
+    background-color: #9a9a9a;
+  }
+
+.navbar {
+    display: flex;
+    height: 103px;
+    align-items: center;
+justify-content: center;
+background-color: #181818;
+opacity: 95%;
+-webkit-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+    width: 37%;
+   
+}
+
+.header li a{
+    font-size: 21px;
+    padding-right: 10px;
+    margin-right: 28px;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.3s ease;
+  
+}
+
+.header li a:hover {
+    color: #9a9a9a;    
+    border: 3px solid;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    padding: 6px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.container-box {
+    width: 70%;
+    height: auto;
+    margin-bottom: 5%;
+}
+
+.container-box button {
+margin-top: 5%;
+}
+
+
+.row-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-left: 43%;
+    margin-top: 7px;
+}
+
+.title {
+    font-size: 30px;
+    color: whitesmoke;
+    opacity: 80%;
+}
+
+.input-form {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-bottom: 3px solid #FFFFFF;
+    margin-bottom: 16px;
+    padding-top: 20px;
+    background: transparent;
+    font-size: 20px;
+    transition: 0.4s;
+    color: white;
+}
+
+
+.input-form:focus {
+    outline: none;    
+    border-bottom: 1px solid #9a9a9a;
+}
+
+.row-text-login {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-size: 25px;
+    color: whitesmoke;
+    opacity: 80%;
+}
+
+.btn {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: #4d4d4d;
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    opacity: 90%;
+    -webkit-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+}
+
+.btn:hover {
+    transition: .3s ease;
+    transform: scale(1.10);
+    opacity: 50%;
+}
+
+.btn-enviar {
+    margin-top: 10px;
+}
+
+.cadeira-barbeiro {
+    width: 150px;
+    margin-left: 37%;
+}
+
+.mudanca-login-cadastro {
+    width: 100%;
+    transition: 0.4s;
+    opacity: 80%;
+    margin-bottom: 25px;
+    font-size: 19px;
+    color: whitesmoke;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px;
+    -webkit-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+}
+
+.mudanca-login-cadastro:hover {
+    color: #9a9a9a;
+}
+
+.span-row-text-login {
+    display: flex;
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+    -webkit-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+.span-row-text-login:hover {
+    color: #9a9a9a;
+    
+}
+
+.image-area {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 100px;
+    margin-top: 10px;
+    transition: 0.5s ease-in-out;
+    background-color:  #181818;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-area img {
+    width: 350px;
+}
+
+.right-value {
+    right: 0px;
+    
+}
+
+.left-value {
+    left: 0px;
+}

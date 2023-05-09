@@ -1,0 +1,276 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+font-family: 'Playfair Display', serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #121212;
+}
+
+a img {
+    width: 127px;
+}
+
+.telaLogin {
+    width: 100px;
+    height: 45%;
+    padding: 10px;
+    font-size: 18px;
+    opacity: 70%;
+    border-radius: 5px;
+    -webkit-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .agendar_btn:hover {
+    transition: .5s ease-in-out;
+    background-color: #9a9a9a;
+  }
+
+.navbar {
+    display: flex;
+    height: 103px;
+    align-items: center;
+justify-content: center;
+background-color: #181818;
+opacity: 95%;
+-webkit-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+    width: 46%;
+   
+}
+
+.header li a{
+    font-size: 21px;
+    padding-right: 10px;
+    margin-right: 28px;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.3s ease;
+  
+}
+
+.header li a:hover {
+    color: #9a9a9a;    
+    border: 3px solid;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    padding: 6px;
+}
+
+.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-box-shadow: 15px 20px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 15px 20px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 15px 20px 5px 0px rgba(0,0,0,0.75);
+}
+
+.slides {
+    width: 500%;
+    height: 400px;
+    display: flex;
+    margin-top: 10px;
+    border-radius: 90px;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2.5s ease-in-out;
+    opacity: 60%;
+}
+
+.slide img {
+    width: 2100px;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 800px;
+    margin-top: 470px;
+    margin-left: 460px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+border:  3px solid #000000;
+padding: 5px;
+border-radius: 10px;
+cursor: pointer;
+transition: 0.5s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+
+}
+
+.manual-btn:hover {
+    background-color: white;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+     margin-left: -75%; 
+}
+
+.navigation-auto div {
+    border: 3px solid #000000;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: 469px;
+    margin-left: 460px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
+.titulo-barbearia {
+    font-size: 65px;
+    color: white;
+    opacity: 70%;
+    padding: 5px;
+}
+
+.container-barbearia {
+    margin-top: 170px;
+    margin-left: 40px;
+}
+
+.container-barbearia hr{
+    width: 50%;
+}
+
+.imagem-cesao{
+    width: 660px;
+    height: 850px;
+    border-radius: 50px;
+    opacity: 80%;
+    margin-top: 50px;
+    margin-left: 45px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
+}
+
+.section-barbearia-home{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.div-texto-home{
+display: flex;
+flex-direction: row;
+justify-content: space-between
+}
+
+.div-texto-home span {
+    font-size: 44px;
+    opacity: 60%;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 40%;
+    margin-right: 150px;
+    margin-bottom: 20px;    
+}
+
+.texto-barbeiros{
+    font-size: 65px;
+    opacity: 70%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 250px;
+    margin-right: 80px;
+}
+
+.texto-barbeiros span {
+    font-size: 44px;
+    margin-top: -200px;
+    margin-left: 30px;
+}
+
+#barbeiros hr {
+    width: 39%;
+   margin-left: 60%;
+}
+
+.imagem-barbeiros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}

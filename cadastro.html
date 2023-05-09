@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="shortcut icon" href="assets/logo-barbearia.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <title>Barbearia Independência</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="header">
+                <figure class="logo">
+                    <a href="#">
+                        <img src="assets/logo-barbearia-semfundo.png" alt="Logo da barbearia">
+                    </a>
+                </figure>
+                <li>
+                    <a href="#">
+                        Sobre nós
+                    </a>
+                    <div class="bar"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        Barbeiros
+                        
+                    </a>
+                    <div class="bar"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        Serviços
+                    </a>
+                    <div class="bar"></div>
+
+                </li>
+            </ul>
+            <button onclick="agendar()" class="agendar_btn">
+                Agendar
+            </button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="box">
+            <div class="container-box">
+                <div class="titulo-cadastro">
+                    <span class="title">Cadastre-se</span>
+                </div>
+                <input type="text" placeholder="CPF" class="input-form"
+                    id="input-cpf-cadastro">
+                <input type="text" placeholder="Nome" class="input-form" id="input-nome-cadastro">
+                <input type="text" placeholder="Celular" class="input-form" id="input-celular-cadastro">
+                <input type="email" placeholder="Email" class="input-form" id="input-email-cadastro">
+                <input type="password" placeholder="Senha" class="input-form" id="input-senha-cadastro">
+                <div class="row-text-login">
+                    <span class="span-row-text-login" onclick="moveImageLeft()">Login</span>
+                </div>
+                <button class="btn btn-enviar" onclick="cadastro()">Cadastrar</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="container-box">
+                <img src="assets/icons/cadeira-de-barbeiro.png" alt="" class="cadeira-barbeiro">
+                <div class="row-title">
+                    <span class="title">Login</span>
+                </div>
+                <input type="text" placeholder="Email" class="input-form" id="input-email-login">
+                <input type="password" placeholder="Senha" class="input-form" id="input-senha-login">
+                <span class="mudanca-login-cadastro" onclick="moveImageRigth()">Cadastre-se</span>
+                <button class="btn" onclick="login()">Entrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-area" id="image-area">
+            <img src="assets/logo-barbearia-semfundo.png">
+    </div>
+
+ <script src="scripts/script.js"></script>   
+</body>
