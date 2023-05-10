@@ -18,22 +18,32 @@ a img {
     width: 127px;
 }
 
-.agendar_btn {
-    width: 100px;
-    height: 45%;
-    padding: 10px;
-    font-size: 18px;
-    opacity: 70%;
-    border-radius: 5px;
-    -webkit-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
-  }
+  .link{
+    list-style: none;
+}
+.link-agendamento{
+    display: flex;
+    flex-direction: row;
+    margin-top: -5px;
+}
+.link-agendamento a{
+font-size: 25px;
+color: whitesmoke;
+text-decoration: none;
+border: 3px solid #9a9a9a ;
+background-color: #121212;
+border-radius: 10px;
+padding: 15px;
+opacity: 90%;
+-webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+-moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+}
 
-  .agendar_btn:hover {
-    transition: .5s ease-in-out;
-    background-color: #9a9a9a;
-  }
+.link-agendamento a:hover{
+    transition: .4s ease-in-out;
+    opacity: 50%;    
+}
 
 .navbar {
     display: flex;
