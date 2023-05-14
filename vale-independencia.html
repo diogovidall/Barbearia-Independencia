@@ -53,23 +53,17 @@
 </header>
 
 <!-- Texto inicial -->
-<section id="texto-validacao">
-    <div class="texto-validacao">
-        <span>Para validar seu vale independência digite o seu nome completo, o barbeiro que lhe atendeu e o dia em que marcou seu serviço. Assim podemos confirmar sua presença.</span>
-    </div>
-</section>
-
 <section id="input-usuario">
     <div class="inputs">
         <div class="input">
-        <input type="text" placeholder="Seu nome completo" class="input-form"
+        <input type="text" placeholder="Insira seu nome completo" class="input-form"
         id="input-nome-completo">
 
-    <input type="text" placeholder="Nome do Barbeiro" class="input-form" id="input-nome-barbeiro">
+    <input type="text" placeholder="Digite nome do Barbeiro que te atendeu" class="input-form" id="input-nome-barbeiro">
     
     <input type="date" class="input-form" id="diaRealizado">
 
-    <button onclick="validar()" class="validar">Validar</button>
+    <button onclick="validar()" class="validar" id="validar">Validar</button>
 </div>
 </section>
 
@@ -89,7 +83,7 @@
                 <img src="assets/icons/cadeira-de-barbeiro.png" alt="Imagem cadeira" width="50px">
             </div>
             <div class="square" id="block3">
-                <img src="assets/icons/cerveja.svg" alt="Imagem cerveja" width="50px">
+                <img src="assets/icons/cadeira-de-barbeiro.png" alt="Imagem cerveja" width="50px">
             </div>
 
             <div class="square" id="block4">
@@ -116,12 +110,12 @@
       </div>      
 </section> 
 
-<!-- Mensagem que ganhou
+<!-- Mensagem que ganhou -->
 <section id="mensagem-resultado">
     <div class="mensagem-resultado">
-      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, in culpa tempore totam enim officia dolor natus labore reprehenderit repellat consequatur, fuga sint atque adipisci eaque, eos quidem modi consequuntur.</span>
+        <span id="mensagem_resultado"></span>
     </div>
-</section> -->
+</section>
 <script src="scripts/vale-independecia.js"></script>
 <body>
 </html>

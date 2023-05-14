@@ -31,10 +31,11 @@ a img {
     box-shadow: 7px 9px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.telaLogin:hover{
+.telaLogin:hover {
     transform: scale(1.10);
     transition: .3s ease-in-out;
 }
+
 .agendar_btn:hover {
     transition: .5s ease-in-out;
     background-color: #9a9a9a;
@@ -66,7 +67,7 @@ a img {
 }
 
 .header li a {
-    font-size: 27px;    
+    font-size: 27px;
     margin-right: 300px;
     margin-left: 70px;
     color: whitesmoke;
@@ -84,20 +85,18 @@ a img {
 
 .slider {
     margin: 0 auto;
-    width: 100%;
-    height: 950px;
+    width: 85%;
+    height: 835px;
     overflow: hidden;
-    border-radius: 5px;
-    -webkit-box-shadow: 15px 20px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 15px 20px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 15px 20px 5px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+
+
 }
 
 .slides {
     width: 500%;
-    height: 450px;
     display: flex;
-    margin-top: 135px;
+    margin-top: 175px;
     border-radius: 90px;
 }
 
@@ -113,15 +112,15 @@ a img {
 }
 
 .slide img {
-    width: 2100px;
-    height: 950px;
+    width: 1790px;
+    height: 845px;
 }
 
 .manual-navigation {
     position: absolute;
     width: 800px;
-    margin-top: 770px;
-    margin-left: 460px;
+    margin-top: 618px;
+    margin-left: 330px;
     display: flex;
     justify-content: center;
 }
@@ -170,8 +169,8 @@ a img {
 .navigation-auto {
     position: absolute;
     width: 800px;
-    margin-top: 770px;
-    margin-left: 460px;
+    margin-top: 618px;
+    margin-left: 330px;
     display: flex;
     justify-content: center;
 }
@@ -196,10 +195,10 @@ a img {
     background-color: #fff;
 }
 
-.logo-barbearia{
+.logo-barbearia {
     width: 550px;
     margin-left: 950px;
-    margin-bottom: -450px;
+    margin-bottom: -530px;
     opacity: 90%;
 }
 
@@ -249,7 +248,7 @@ a img {
     margin-right: 20px;
     margin-bottom: 40px;
     text-align: justify;
-    
+
 }
 
 .texto-barbeiros {
@@ -261,7 +260,7 @@ a img {
     justify-content: flex-end;
     margin-top: 150px;
     margin-right: 80px;
-    
+
 }
 
 .texto-barbeiros span {
@@ -305,22 +304,22 @@ a img {
 }
 
 
-.titulo-servicos{
+.titulo-servicos {
     font-size: 95px;
-    margin-top: 0px;
+    margin-top: -160px;
     color: white;
     opacity: 90%;
     display: flex;
     justify-content: center;
 }
 
-#servicos hr{
-width: 52%;
-margin-left: 24%;
+#servicos hr {
+    width: 52%;
+    margin-left: 24%;
 }
 
-#servicos{
-    margin-top: 300px;   
+#servicos {
+    margin-top: 300px;
 }
 
 
@@ -337,10 +336,10 @@ margin-left: 24%;
     border-radius: 10px;
     opacity: 60%;
     margin-top: 90px;
-    -webkit-box-shadow: 18px 21px 14px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 18px 21px 14px 0px rgba(0,0,0,0.75);
-box-shadow: 18px 21px 14px 0px rgba(0,0,0,0.75);
-   margin: 100px;
+    -webkit-box-shadow: 18px 21px 14px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 18px 21px 14px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 18px 21px 14px 0px rgba(0, 0, 0, 0.75);
+    margin: 100px;
 }
 
 .preco {
@@ -362,7 +361,7 @@ box-shadow: 18px 21px 14px 0px rgba(0,0,0,0.75);
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 26px;
-    
+
 }
 
 #agendamento hr {
@@ -370,66 +369,68 @@ box-shadow: 18px 21px 14px 0px rgba(0,0,0,0.75);
     margin-left: 55%;
 }
 
-.background-agendamento img{
-width: 100%;
-height: 750px;
-margin-top: 20px;
-border-radius: 5px;
-opacity: 50%;
--webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
--moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+.background-agendamento img {
+    width: 100%;
+    height: 750px;
+    margin-top: 20px;
+    border-radius: 5px;
+    opacity: 50%;
+    -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
 }
 
-.link-agendamento{
+.link-agendamento {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: -80px;
 }
-.link-agendamento a{
-font-size: 59px;
-color: whitesmoke;
-text-decoration: none;
-border: 5px solid black;
-background-color: #000000;
-border-radius: 20px;
-padding: 21px;
-opacity: 90%;
--webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
--moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+
+.link-agendamento a {
+    font-size: 59px;
+    color: whitesmoke;
+    text-decoration: none;
+    border: 5px solid black;
+    background-color: #000000;
+    border-radius: 20px;
+    padding: 21px;
+    opacity: 90%;
+    -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
 }
 
-.link-agendamento a:hover{
+.link-agendamento a:hover {
     transition: .4s ease-in-out;
     opacity: 70%;
-    
+
 }
 
-.btn-agendamento{
+.btn-agendamento {
     margin-top: -583px;
     margin-left: 43px;
 }
 
-.contato{
+.contato {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 180px;
-    
+
 }
-.contato a{
+
+.contato a {
     font-size: 30px;
     color: whitesmoke;
     text-decoration: none;
     border-radius: 50px;
-    
+
 
 }
 
-.footer a{
+.footer a {
     display: flex;
     justify-content: center;
     font-size: 35px;
@@ -438,17 +439,18 @@ box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
 
 }
 
-.footer a:hover{
+.footer a:hover {
     color: white;
     transition: .4s ease-in-out;
 }
-.social-icons{
-display: flex;
-justify-content: center;
-margin-top: 130px;
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
 }
 
-.social-icons a{
+.social-icons a {
     margin-top: 1000px;
     text-decoration: none;
     padding: 25px;
@@ -463,14 +465,14 @@ margin-top: 130px;
 }
 
 #zap:hover {
-    transition: .5s ;
+    transition: .5s;
     transform: scale(1.1);
     color: #25D366;
     cursor: pointer;
 }
 
 #insta:hover {
-    transition: .5s ;
+    transition: .5s;
     transform: scale(1.1);
     color: #f20356;
     cursor: pointer;
@@ -478,14 +480,14 @@ margin-top: 130px;
 }
 
 #google:hover {
-    transition: .5s ;
+    transition: .5s;
     transform: scale(1.1);
     color: #bebb0e;
     cursor: pointer;
 }
 
 /* Cartão fidelidade */
-.section-cartao-fidelidade{
+.section-cartao-fidelidade {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -498,7 +500,7 @@ margin-top: 130px;
     justify-content: space-between;
 }
 
-.div-texto-cartao img{
+.div-texto-cartao img {
     width: 750px;
     height: 900px;
     border-radius: 50px;
@@ -519,7 +521,7 @@ margin-top: 130px;
     justify-content: flex-end;
     width: 47%;
     margin-bottom: 232px;
-    
+
 }
 
 .div-texto-cartao h1 {
@@ -533,38 +535,38 @@ margin-top: 130px;
     width: 48%;
     margin-right: -824px;
     margin-top: 202px;
-    
+
 }
 
 
 
-.link-cartao{
+.link-cartao {
     list-style: none;
-    
+
 }
 
-.link-cartao li{
-display: flex;
-margin-top: 650px;
-margin-left: -620px;
-}
-.link-cartao a{
-font-size: 50px;
-color: whitesmoke;
-text-decoration: none;
-border: 3px solid black;
-background-color: #000000;
-border-radius: 20px;
-padding: 15px;
-opacity: 90%;
--webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
--moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+.link-cartao li {
+    display: flex;
+    margin-top: 650px;
+    margin-left: -620px;
 }
 
-.link-cartao a:hover{
+.link-cartao a {
+    font-size: 50px;
+    color: whitesmoke;
+    text-decoration: none;
+    border: 3px solid black;
+    background-color: #000000;
+    border-radius: 20px;
+    padding: 15px;
+    opacity: 90%;
+    -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+}
+
+.link-cartao a:hover {
     transition: .4s ease-in-out;
     opacity: 70%;
-    
-}
 
+}
