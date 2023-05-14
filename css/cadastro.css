@@ -188,6 +188,7 @@ box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
 .cadeira-barbeiro {
     width: 150px;
     margin-left: 37%;
+    opacity: 50%;
 }
 
 .mudanca-login-cadastro {
@@ -244,7 +245,7 @@ box-shadow: 7px 9px 5px 0px rgba(0,0,0,0.75);
 }
 
 .image-area img {
-    width: 350px;
+    width: 550px;
 }
 
 .right-value {

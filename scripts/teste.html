@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #cartao {
+      width: 200px;
+      height: 200px;
+      background-color: gray;
+      color: white;
+      text-align: center;
+      line-height: 200px;
+      font-size: 24px;
+    }
+  
+    #cartao.anotado {
+      background-color: green;
+    }
+  </style>
+<body>
+    <input type="text" id="nome" placeholder="Nome Completo">
+<input type="text" id="barbeiro" placeholder="Barbeiro">
+<input type="date" id="data" placeholder="Data do Serviço">
+<button id="salvar">Salvar</button>
+
+<div id="cartao">Cartão de fidelidade</div>
+</body>
+</html>
+<script>
+    const salvarBtn = document.getElementById("salvar");
+    const cartaoDiv = document.getElementById("cartao");
+  
+    salvarBtn.addEventListener("click", function() {
+      const nome = document.getElementById("nome").value;
+      const barbeiro = document.getElementById("barbeiro").value;
+      const data = document.getElementById("data").value;
+  
+      if (nome !== "" && barbeiro !== "" && data !== "") {
+        // Valores estão corretos, então anote no cartão
+        cartaoDiv.classList.add("anotado");
+      }
+    });
+  </script>
