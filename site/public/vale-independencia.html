@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vale-independencia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="assets/logo-barbearia.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+
+    <title>Vale Independência</title>
+</head>
+<header>
+    <nav class="navbar">
+        <ul class="header">
+            <figure class="logo">
+                <a href="./index.html">
+                    <img src="assets/logo-barbearia-semfundo.png" alt="Logo da barbearia">
+                </a>
+            </figure>
+            <li>
+                <a href="./index.html#home">
+                    Sobre nós
+                </a>
+                <div class="bar"></div>
+            </li>
+            <li>
+                <a href="./index.html#barbeiros">
+                    Barbeiros
+                    
+                </a>
+                <div class="bar"></div>
+            </li>
+            <li>
+                <a href="./index.html#servicos">
+                    Serviços
+                </a>
+                <div class="bar"></div>
+
+            </li>
+        </ul>
+        <div class="link-agendamento">
+            <li class="link">
+                <a href="https://booksy.com/pt-br/174888_barbearia-independencia-sp_barbearias_1047773_sao-paulo">Agendar</a>
+            </li>
+        </div>
+    </nav>
+</header>
+
+<!-- Texto inicial -->
+<section id="input-usuario">
+    <div class="inputs">
+        <div class="input">
+        <input type="text" placeholder="Insira seu nome completo" class="input-form"
+        id="input-nome-completo">
+
+    <input type="text" placeholder="Digite nome do Barbeiro que te atendeu" class="input-form" id="input-nome-barbeiro">
+    
+    <input type="date" class="input-form" id="diaRealizado">
+
+    <button onclick="validar()" class="validar" id="validar">Validar</button>
+</div>
+</section>
+
+<!-- Vale independência -->
+<section id="vale-independencia">
+    <div class="card">
+        <div class="titulo">
+            <img src="assets/logo-barbearia-semfundo.png" alt="">
+            <span>Vale Independência</span>
+        </div>
+        <div class="card-content">
+          <div class="service-squares">
+            <div class="square" id="block1">
+                <img src="assets/icons/cadeira-de-barbeiro.png" alt="Imagem cadeira" width="50px">
+            </div>
+            <div class="square" id="block2">
+                <img src="assets/icons/cadeira-de-barbeiro.png" alt="Imagem cadeira" width="50px">
+            </div>
+            <div class="square" id="block3">
+                <img src="assets/icons/cadeira-de-barbeiro.png" alt="Imagem cerveja" width="50px">
+            </div>
+
+            <div class="square" id="block4">
+                <img src="assets/icons/cadeira-de-barbeiro.png" alt="Imagem cadeira" width="50px"></div>
+
+            <div class="square" id="block5">
+                <img src="assets/icons/cadeira-de-barbeiro.png" alt="Imagem cadeira" width="50px"></div>
+
+            <div class="square" id="block6">
+                <img src="assets/icons/cadeira-de-barbeiro.png" alt="Imagem cadeira" width="50px"></div>
+
+            <div class="square" id="block7">
+                <img src="assets/icons/cadeira-de-barbeiro.png" alt="Imagem cadeira" width="50px"></div>
+
+            <div class="square" id="block8">
+                <img src="assets/icons/cadeira-de-barbeiro.png" alt="Imagem cadeira" width="50px"></div>
+
+            <div class="square" id="block9">
+                <img src="assets/icons/combo.png" alt="Imagem Combo" width="50px">
+
+            </div>
+          </div>
+        </div>
+      </div>      
+</section> 
+
+<!-- Mensagem que ganhou -->
+<section id="mensagem-resultado">
+    <div class="mensagem-resultado">
+        <span id="mensagem_resultado"></span>
+    </div>
+</section>
+<script src="js/scripts/vale-independecia.js"></script>
+<body>
+</html>

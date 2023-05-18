@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="assets/logo-barbearia.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+
+    <title>Barbearia Independência</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="header">
+                <figure class="logo">
+                    <a href="./index.html">
+                        <img src="assets/logo-barbearia-semfundo.png" alt="Logo da barbearia">
+                    </a>
+                </figure>
+                <li>
+                    <a href="./index.html#home">
+                        Sobre nós
+                    </a>
+                </li>
+                <li>
+                    <a href="./index.html#cartao-fidelidade">
+                        Vale Independência
+                    </a>
+                </li>
+                <li>
+                    <a href="./index.html#servicos">
+                        Serviços
+                    </a>
+                </li>
+            </ul>
+            <button onclick="telaLogin()" class="telaLogin" id="telaLogin">
+                Login
+            </button>
+        </nav>
+    </header>
+
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="assets/foto-provisoria-1.jpg" alt="magem 1" height="500">
+            </div>
+
+            <div class="slide">
+                <img src="assets/foto-provisoria-2.jpg" alt="imagem 2" height="500px">
+            </div>
+
+            <div class="slide">
+                <img src="assets/foto-provisoria-3.jpg" alt="imagem 3" height="500px">
+            </div>
+
+            <div class="slide">
+                <img src="assets/foto-provisoria-4.jpg" alt="imagem 4" height="500px">
+
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+    <!-- Texto falando sobre a barbearia -->
+    <section id="home">
+        <div class="container-barbearia">
+            <img src="assets/logo-barbearia-semfundo.png" alt="logo barbearia" class="logo-barbearia">
+        </div>
+        <div class="section-barbearia-home">
+            <div class="div-texto-home">
+                <img src="assets/foto-cesao.jpg" alt="Foto César" class="imagem-cesao">
+                <span>Bem-vindo à Barbearia Independência, um lugar onde o estilo encontra a tradição. Nos dedicamos em
+                    proporcionar aos nossos clientes a melhor experiência em
+                    uma barbearia clássica.
+
+                    Nós nos esforçamos para oferecer um atendimento personalizado e garantir que nossos clientes saiam
+                    satisfeito com seus novos visuais.</span>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Serviços da barbearia -->
+    <section id="servicos">
+        <span class="titulo-servicos">Nossos Trabalhos</span>
+        <hr>
+        <div class="carrosel-servicos">
+            <div class="container-servicos" id="img">
+                <div class="imagem-servicos">
+                    <img src="assets/foto-corte-pedro.JPG" alt="Corte Pedro" class="corte-pedro">
+
+                    <img src="assets/foto-barba-henrique.jpg" alt="barba henrique" class="barba-henrique">
+
+                    <img src="assets/foto-cliente-combo.JPG" alt="foto combo" class="combo-cliente">
+
+                    <img src="assets/corte-olliver.JPG" alt="corte Olliver" class="corte-olliver">
+
+                    <img src="assets/barba-julio.JPG" alt="Barba Julio" class="barba-julio">
+
+                    <img src="assets/corte-social.JPG" alt="corte social" class="corte-social">
+
+                    <img src="assets/corte-joao.JPG" alt="corte joão" class="corte-joao">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agendamento da barbearia -->
+    <section id="agendamento">
+        <span class="agendamento">Agende seu horário</span>
+        <hr>
+
+        <div class="background-agendamento">
+            <img src="assets/foto-barbearia.png" alt="Backgorund barbearia">
+        </div>
+        <div class="link-agendamento">
+            <div class="btn-agendamento">
+
+                <li>
+                    <a
+                        href="https://booksy.com/pt-br/174888_barbearia-independencia-sp_barbearias_1047773_sao-paulo">Agendar</a>
+                </li>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cartão fidelidade -->
+    <section id="cartao-fidelidade">
+        <div class="section-cartao-fidelidade">
+            <div class="div-texto-cartao">
+                <img src="assets/foto-cartao-fidelidade.JPG" alt="Foto cartão fidelidade" class="imagem-cartao">
+                <h1>Vale Independência</h1>
+                <hr>
+                <span>Conheça o nosso vale independência. Nosso cartão fidelidade onde proporcionamos aos nossos
+                    clientes nossa gratidão ao recebe-los em nossa casa.</span>
+            </div>
+
+            <div class="link-cartao">
+                <li>
+                    <a href="./vale-independencia.html">Conhecer Vale</a>
+                </li>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/barbeariaindependenciasp/"><i class="fa-brands fa-instagram"
+                        id="insta"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5511985938497&text="><i class="fa-brands fa-whatsapp"
+                        id="zap"></i></a>
+                <a
+                    href="https://www.google.com/search?client=firefox-b-d&q=barbearia+independ%C3%AAncia#lrd=0x94ce5b6619a1081f:0xa611dd1a14602512,1,,,,"><i
+                        class="fa-brands fa-google" id="google"></i></a>
+            </div>
+            <div class="endereco">
+                <a
+                    href="https://www.google.com/maps/dir//barbearia+independ%C3%AAncia/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x94ce5b6619a1081f:0xa611dd1a14602512?sa=X&ved=2ahUKEwjHy8yb5-n-AhUKGrkGHVx5CiwQ9Rd6BAhHEAU">Rua
+                    bom pastor , 2829 - Sacomã,
+                    São Paulo - SP, 04203-053</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts/script.js"></script>
+</body>
