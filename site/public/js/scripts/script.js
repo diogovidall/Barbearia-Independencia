@@ -63,14 +63,10 @@ function cadastrar() {
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
     if (nomeVar == "" ||cpfVar == ""|| emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-        cardErro.style.display = "block"
-        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
-        finalizarAguardar();
+        alert("Preencha todos os campos corretamente.");
         return false;
-    }
-    else {
-        setInterval(sumirMensagem, 5000)
+    } else if(senhaVar !== confirmacaoSenhaVar){
+alert("Erro ao encontrar sua senha. Verifique se digitou ela corretamente.");
     }
 
     // Enviando o valor da nova input
@@ -91,23 +87,14 @@ function cadastrar() {
 
         console.log("resposta: ", resposta);
 
-        if (resposta.ok) {
-            cardErro.style.display = "block";
-
-            mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-            setTimeout(() => {
-                window.location = "login.html";
-            }, "2000")
-
+        if (resposta.ok && senhaVar == confirmacaoSenhaVar) {
+           alert("Cadastro realizado com sucesso!");
             limparFormulario();
-            finalizarAguardar();
         } else {
-            throw ("Houve um erro ao tentar realizar o cadastro!");
+            throw new Error("Houve um erro ao tentar realizar o cadastro!");
         }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
     });
 
     return false;
@@ -124,18 +111,15 @@ function telaLogin() {
 }
 
 function entrar() {
-    aguardar();
-
-    var emailVar = email_input.value;
+     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
 
     if (emailVar == "" || senhaVar == "") {
-        cardErro.style.display = "block"
-        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-        finalizarAguardar();
+        alert("Verifique se todos os campos foram digitados corretamente.");
         return false;
     }
     else {
+        alert("Entrando na página inicial")
         setInterval(sumirMensagem, 5000)
     }
 
@@ -166,8 +150,8 @@ function entrar() {
                 sessionStorage.ID_USUARIO = json.id;
 
                 setTimeout(function () {
-                    window.location = "./dashboard/cards.html";
-                }, 1000); // apenas para exibir o loading
+                    window.location = "./index.html";
+                }, 1000); 
 
             });
 
@@ -177,7 +161,6 @@ function entrar() {
 
             resposta.text().then(texto => {
                 console.error(texto);
-                finalizarAguardar(texto);
             });
         }
 
@@ -186,8 +169,4 @@ function entrar() {
     })
 
     return false;
-}
-
-function sumirMensagem() {
-    cardErro.style.display = "none"
 }

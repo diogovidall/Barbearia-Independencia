@@ -30,9 +30,9 @@ validarBtn.addEventListener("click", function validar() {
             existe = true;
             break;
         } 
-        if(!existe){
-            dataCorte.push(diaRealizado.value);
-        }
+    }
+    if(!existe){
+        dataCorte.push(diaRealizado.value);
     }
 
     if (nome !== "" && barbeiro !== "" && data !== "") {
