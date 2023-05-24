@@ -21,19 +21,20 @@ validarBtn.addEventListener("click", function validar() {
     const nome = document.getElementById("input-nome-completo").value;
     const barbeiro = document.getElementById("input-nome-barbeiro").value;
     const data = document.getElementById("diaRealizado").value;
-    var existe = false;
-    
+
     //Aqui ele passa por todos os valores da lista dataCorte e valida
-    
+    var existe = false;
     for( var i = 0; i < dataCorte.length; i++){
-        if(diaRealizado.value == dataCorte.indexOf(i)){
+        var dataLista = dataCorte[i].data;
+        if(dataLista == data){
             existe = true;
             break;
         } 
     }
     if(!existe){
-        dataCorte.push(diaRealizado.value);
-    }
+        dataCorte.push({
+            data: diaRealizado.value
+        });
 
     if (nome !== "" && barbeiro !== "" && data !== "") {
 
@@ -49,6 +50,7 @@ validarBtn.addEventListener("click", function validar() {
     else {
         alert("Não foi possível achar no sistema seu cadastro!");
     }
+}
     
 });
 

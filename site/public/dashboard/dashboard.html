@@ -44,23 +44,43 @@
     <!-- Começo do corpo -->
     <div class="background-corpo">
         <div id="corpo">
-            <div class="texto-corpo">
-                <span>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis non qui aperiam quidem, excepturi error consectetur quam impedit, nostrum enim commodi nam, quos sapiente saepe quasi repellendus? Iste, expedita delectus.
-                </span>
+            <div class="textos">
+                <div class="texto-quantidade-clientes">
+                    <span class="titulo_mais_movimento">
+                        Mês com mais movimento:<br>
+                        <span id="mais_movimento">
+                            Janeiro - 1600 (Clientes)
+                        </span>
+                    </span>
+                    <hr>
+                    <span class="titulo_menos_movimento">
+                        Mês com menos movimento:<br>
+                        <span id="menos_movimento">
+                            Março - 800 (Clientes)
+                        </span>
+                    </span>
+                </div>
+                <div class="texto-corpo">
+                    <span>
+                    Quantidade de clientes por mês
+                    </span>
+                
+                    <input placeholder="Clientes por mes" type="number"><br>
+                    <button onclick="verClientela()">Ver clientela</button>
+                </div>
             </div>
                <!-- Começo do Dashboard -->
         <div id="corpo-dashboard">
-        <div class="dashboard">
+        <div class="div_dashboard">
             <!-- Começo do dashboard -->
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi repellat placeat delectus consectetur aspernatur quas facere pariatur, similique necessitatibus debitis, cumque nostrum velit, odit dolorem explicabo veritatis accusamus. Cumque, architecto!
+            <canvas id="dashboard"></canvas>
         </div>
         </div>
         </div>
         <!-- Fim do Dashboard -->
     </div   >
         <!-- Fim do Corpo -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/scripts/dashboard.js"></script>
 </body>
-
 </html>
