@@ -10,7 +10,8 @@
     <link rel="shortcut icon" href="assets/logo-barbearia.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Playfair+Display&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=EB+Garamond&family=Oswald:wght@600&family=Playfair+Display&family=Raleway:ital,wght@1,100&display=swap"
         rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     <title>Vale Independência</title>
@@ -43,12 +44,12 @@
                 <div class="bar"></div>
 
             </li>
+            <div class="link-agendamento">
+                <li class="link">
+                    <a href="https://booksy.com/pt-br/174888_barbearia-independencia-sp_barbearias_1047773_sao-paulo">Agendar</a>
+                </li>
+            </div>
         </ul>
-        <div class="link-agendamento">
-            <li class="link">
-                <a href="https://booksy.com/pt-br/174888_barbearia-independencia-sp_barbearias_1047773_sao-paulo">Agendar</a>
-            </li>
-        </div>
     </nav>
 </header>
 
@@ -59,13 +60,17 @@
         <input type="text" placeholder="Insira seu nome completo" class="input-form"
         id="input-nome-completo">
 
-    <input type="text" placeholder="Digite nome do Barbeiro que te atendeu" class="input-form" id="input-nome-barbeiro">
-    
+        <select name="escolhaBarbeiro" placeholder="Qual barbeiro te atendeu?"  id="escolhaBarbeiro" class="select-barbeiros">
+            <option value="barbeiroCesar" id="barbeiroCesar" class="option">César Gouvêa</option>
+            <option value="barbeiroMarcelo" id="barbeiroMarcelo" class="option">Marcelo Pereira</option>
+            <option value="barbeiroDiogo" id="barbeiroDiogo" class="option">Diogo Vidal</option>
+          </select>
     <input type="date" class="input-form" id="diaRealizado">
 
     <button onclick="validar()" class="validar" id="validar">Validar</button>
 </div>
 </section>
+<embed height="60" type="audio/mp3" width="200" src="./music/elvis.m4a" volume="50" loop="true" autostart="false" class="music-site"/>
 
 <!-- Vale independência -->
 <section id="vale-independencia">
@@ -112,7 +117,7 @@
 
 <!-- Mensagem que ganhou -->
 <section id="mensagem-resultado">
-    <div class="mensagem-resultado">
+    <div class="mensagem-resultado" id="mensagem-resultado">
         <span id="mensagem_resultado"></span>
     </div>
 </section>

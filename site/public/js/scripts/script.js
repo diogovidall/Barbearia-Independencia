@@ -24,13 +24,13 @@ function moveImageLeft() {
 var count = 1;
 document.getElementById("radio1").checked = true;
 
-setInterval( function(){
+setInterval(function () {
     nextImage();
-}, 6000)
+}, 4000)
 
 function nextImage() {
     count++;
-    if(count>4){
+    if (count > 4) {
         count = 1;
     }
 
@@ -46,7 +46,7 @@ let idx = 0;
 function carrosel() {
     idx++;
 
-    if(idx > img.length - 1) {
+    if (idx > img.length - 1) {
         idx = 0;
     }
     imgs.style.transform = `translateX(${-idx * 550}px)`;
@@ -62,11 +62,20 @@ function cadastrar() {
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-    if (nomeVar == "" ||cpfVar == ""|| emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-        alert("Preencha todos os campos corretamente.");
+    if (nomeVar == "" || cpfVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        Swal.fire(
+            'Não está conseguindo realizar seu cadastro?',
+            'Certifique-se que todos os campos estejam preenchidos',
+            'question'
+        );
         return false;
-    } else if(senhaVar !== confirmacaoSenhaVar){
-alert("Erro ao encontrar sua senha. Verifique se digitou ela corretamente.");
+    } else if (senhaVar != confirmacaoSenhaVar) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Erro ao fazer o cadastro',
+            text: 'Preencha todos os campos corretamente.',
+        });
+        return false;
     }
 
     // Enviando o valor da nova input
@@ -88,7 +97,13 @@ alert("Erro ao encontrar sua senha. Verifique se digitou ela corretamente.");
         console.log("resposta: ", resposta);
 
         if (resposta.ok && senhaVar == confirmacaoSenhaVar) {
-           alert("Cadastro realizado com sucesso!");
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Cadastro realizado com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+            });
             limparFormulario();
         } else {
             throw new Error("Houve um erro ao tentar realizar o cadastro!");
@@ -105,22 +120,41 @@ function sumirMensagem() {
 }
 
 // login
-function telaLogin() {
-    var botaoLogin = document.querySelector('#telaLogin').value;
-    window.location.href = "./cadastro.html";
-}
 
 function entrar() {
-     var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
+    var emailVar = email_input_login.value;
+    var senhaVar = senha_input_login.value;
 
     if (emailVar == "" || senhaVar == "") {
-        alert("Verifique se todos os campos foram digitados corretamente.");
+        Swal.fire(
+            'Erro ao realizar o login?',
+            'Certifique-se que já tenha feito o cadastro.',
+            'question'
+        );
         return false;
-    }
-    else {
-        alert("Entrando na página inicial")
-        setInterval(sumirMensagem, 5000)
+    } else {
+        let timerInterval
+        Swal.fire({
+            title: 'Entrando em sua conta, por favor aguarde...',
+            html: 'Mensagem fechando em <b></b> segundos.',
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading()
+                const b = Swal.getHtmlContainer().querySelector('b')
+                timerInterval = setInterval(() => {
+                    b.textContent = Swal.getTimerLeft()
+                }, 100)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            }
+        }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+                console.log('I was closed by the timer')
+            }
+        });
     }
 
     console.log("FORM LOGIN: ", emailVar);
@@ -151,15 +185,20 @@ function entrar() {
 
                 setTimeout(function () {
                     window.location = "./index.html";
-                }, 1000); 
+                }, 1000);
 
             });
 
         } else {
 
             console.log("Houve um erro ao tentar realizar o login!");
-
             resposta.text().then(texto => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erro ao fazer o login',
+                    text: texto,
+                });
+
                 console.error(texto);
             });
         }

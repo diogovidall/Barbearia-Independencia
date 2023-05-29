@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=EB+Garamond&family=Oswald:wght@600&family=Playfair+Display&family=Raleway:ital,wght@1,100&display=swap');
+
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Oswald', sans-serif;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -11,6 +12,17 @@ body {
   height: 105vh;
   overflow-x: hidden;
   background-color: #121212;
+}
+
+.music-site {
+  position: relative;
+  left: 3%;
+  top: -23%;
+  border-radius: 100px;
+  background-color: #191919;
+  -webkit-box-shadow: 18px 21px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 18px 21px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 18px 21px 14px 0px rgba(0, 0, 0, 0.75);
 }
 
 a img {
@@ -28,7 +40,7 @@ a img {
 }
 
 .link-agendamento a {
-  font-size: 25px;
+  font-size: 20px;
   color: whitesmoke;
   text-decoration: none;
   border: 3px solid #9a9a9a;
@@ -48,7 +60,7 @@ a img {
 
 .navbar {
   display: flex;
-  height: 103px;
+  height: 110px;
   align-items: center;
   justify-content: center;
   background-color: #181818;
@@ -66,14 +78,12 @@ a img {
   justify-content: space-around;
   text-align: center;
   list-style: none;
-  width: 37%;
+  width: 60%;
 
 }
 
 .header li a {
-  font-size: 21px;
-  padding-right: 10px;
-  margin-right: 28px;
+  font-size: 25px;
   color: whitesmoke;
   text-decoration: none;
   transition: 0.3s ease;
@@ -82,10 +92,13 @@ a img {
 
 .header li a:hover {
   color: #9a9a9a;
-  border: 3px solid;
-  border-radius: 10px;
+  border-bottom: 3px solid #9a9a9a;
+  transition: .1s ease-in-out;
+}
+
+.logo:hover {
+  opacity: 50%;
   transition: .3s ease-in-out;
-  padding: 6px;
 }
 
 /* Texto validação */
@@ -103,6 +116,21 @@ a img {
 .texto-input {
   font-size: 32px;
   opacity: 70%;
+  color: white;
+}
+
+.option {
+  background-color: #9a9a9a;
+}
+
+.select-barbeiros {
+  width: 25%;
+  height: 41px;
+  border: 0;
+  border-bottom: 3px solid #FFFFFF;
+  background: transparent;
+  font-size: 20px;
+  transition: 0.4s;
   color: white;
 }
 
@@ -285,11 +313,31 @@ a img {
 
 .mensagem-resultado {
   margin-left: 60px;
-  margin-top: 60px;
+  margin-top: 20px;
   text-align: center;
   background-color: #181818;
   border: 3px solid #9a9a9a;
   border-radius: 20px;
   padding: 20px;
   width: 90%;
+}
+
+.btn_resultado {
+  font-size: 25px;
+  color: whitesmoke;
+  text-decoration: none;
+  border: 3px solid #9a9a9a;
+  background-color: #121212;
+  border-radius: 10px;
+  padding: 15px;
+  opacity: 90%;
+  -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+}
+
+.btn_resultado:hover {
+  transform: scale(1.10);
+  transition: .4s ease-in-out;
+  opacity: 50%;
 }

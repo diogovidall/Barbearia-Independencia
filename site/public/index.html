@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="assets/logo-barbearia.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Playfair+Display&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=EB+Garamond&family=Oswald:wght@600&family=Playfair+Display&family=Raleway:ital,wght@1,100&display=swap"
         rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="shortcut icon" href="assets/logo-barbearia.jpg" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Barbearia Independência</title>
 </head>
 
@@ -22,19 +23,10 @@
     <header>
         <nav class="navbar">
             <ul class="header">
-                <figure class="logo">
-                    <a href="./index.html">
-                        <img src="assets/logo-barbearia-semfundo.png" alt="Logo da barbearia">
-                    </a>
-                </figure>
+
                 <li>
                     <a href="./index.html#home">
                         Sobre nós
-                    </a>
-                </li>
-                <li>
-                    <a href="./index.html#cartao-fidelidade">
-                        Vale Independência
                     </a>
                 </li>
                 <li>
@@ -42,10 +34,21 @@
                         Serviços
                     </a>
                 </li>
+                <figure class="logo">
+                    <a href="./index.html">
+                        <img src="assets/logo-barbearia-semfundo.png" alt="Logo da barbearia" width="150px">
+                    </a>
+                </figure>
+
+                <li>
+                    <a href="./index.html#cartao-fidelidade">
+                        Vale Independência
+                    </a>
+                </li>
+                <a href="./cadastro.html" class="telaLogin" id="telaLogin">
+                    <img src="assets/icons/login.png" alt="Imagem Login" width="55px">
+                </a>
             </ul>
-            <button onclick="telaLogin()" class="telaLogin" id="telaLogin">
-                Login
-            </button>
         </nav>
     </header>
 
@@ -73,24 +76,19 @@
 
             </div>
 
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
-
-            <div class="manual-navigation">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-            </div>
         </div>
     </div>
+    <!-- Musica do site -->
+    <embed height="60" type="audio/mp3" width="300" src="./music/colors.m4a" volume="50" loop="true" autostart="false"
+        class="music-site" />
+    <!-- Fim da musica do site -->
+
+
     <!-- Texto falando sobre a barbearia -->
     <section id="home">
+
         <div class="container-barbearia">
+
             <img src="assets/logo-barbearia-semfundo.png" alt="logo barbearia" class="logo-barbearia">
         </div>
         <div class="section-barbearia-home">
@@ -139,14 +137,13 @@
         <hr>
 
         <div class="background-agendamento">
-            <img src="assets/foto-barbearia.png" alt="Backgorund barbearia">
+            <img src="assets/foto-cesao-diogo.jpg" alt="Backgorund barbearia">
         </div>
         <div class="link-agendamento">
             <div class="btn-agendamento">
-
                 <li>
-                    <a
-                        href="https://booksy.com/pt-br/174888_barbearia-independencia-sp_barbearias_1047773_sao-paulo">Agendar</a>
+                    <a href="https://booksy.com/pt-br/174888_barbearia-independencia-sp_barbearias_1047773_sao-paulo">
+                        <img src="assets/icons/agendar.png" alt="Imagem Agendamento" width="200px"></a>
                 </li>
             </div>
         </div>

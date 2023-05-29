@@ -19,7 +19,7 @@ var dataCorte = [];
 
 validarBtn.addEventListener("click", function validar() {
     const nome = document.getElementById("input-nome-completo").value;
-    const barbeiro = document.getElementById("input-nome-barbeiro").value;
+    const barbeiro = document.getElementById("escolhaBarbeiro").value;
     const data = document.getElementById("diaRealizado").value;
 
     //Aqui ele passa por todos os valores da lista dataCorte e valida
@@ -43,14 +43,30 @@ validarBtn.addEventListener("click", function validar() {
             blocos[numeroDoBloco].style.backgroundColor = "#9a9a9a";
             numeroDoBloco++;
         } else {
-            mensagem_resultado.innerHTML = `Obrigado ${nome} por fazer parte de nossa Barbearia. Você completou nosso Vale Independência, e para agradecer oferecemos um serviço gratuito para você aproveitá-lo quando preferir.`;
-            alert("Você Completou o Vale Independência!!!")
-        }
+            mensagem_resultado.innerHTML = `Obrigado ${nome} por fazer parte de nossa Barbearia. Você completou nosso Vale Independência, e para agradecer oferecemos um serviço gratuito para você aproveitá-lo quando preferir. <br>
+            <button class="btn_resultado" onclick="zerarFidelidade()">Começar novo Vale</button>`;
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Vale independência completado com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            }
     }
     else {
-        alert("Não foi possível achar no sistema seu cadastro!");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: '  Não foi possível achar no sistema seu cadastro!',
+            footer: '<a href="./cadastro.html">Faça o cadastro para completar seu vale independênica.</a>'
+          })
+      
     }
 }
     
 });
 
+function zerarFidelidade(){
+    window.location.href = './vale-independencia.html';
+}

@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="shortcut icon" href="assets/logo-barbearia.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=EB+Garamond&family=Oswald:wght@600&family=Playfair+Display&family=Raleway:ital,wght@1,100&display=swap"
+        rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Login | Cadastro</title>
 </head>
@@ -47,15 +49,14 @@
                     <a href="https://booksy.com/pt-br/174888_barbearia-independencia-sp_barbearias_1047773_sao-paulo">Agendar</a>
                 </li>
             </div>
+            <!-- Musica do site -->
+            <embed height="60" type="audio/mp3" width="300" src="./music/elvis-blues.m4a" volume="50" loop="true" autostart="false" class="music-site"/>
+            <!-- Fim da musica do site -->
         </nav>
     </header>
-
     <div class="container">
         <div class="box">
             <div class="container-box">
-                <div class="titulo-cadastro">
-                    <span class="title">Cadastre-se</span>
-                </div>
                 <input type="text" placeholder="Nome" class="input-form" id="nome_input">
                 <input type="text" placeholder="CPF" class="input-form" id="cpf_input">
                 <input type="email" placeholder="Email" class="input-form" id="email_input">
@@ -73,11 +74,8 @@
         <div class="box">
             <div class="container-box">
                 <img src="assets/icons/cadeira-de-barbeiro.png" alt="" class="cadeira-barbeiro">
-                <div class="row-title">
-                    <span class="title">Login</span>
-                </div>
-                <input type="text" placeholder="Email" class="input-form" id="email_input">
-                <input type="password" placeholder="Senha" class="input-form" id="senha_input">
+                <input type="text" placeholder="Email" class="input-form" id="email_input_login">
+                <input type="password" placeholder="Senha" class="input-form" id="senha_input_login">
                 <span class="mudanca-login-cadastro" onclick="moveImageRigth()">Cadastre-se</span>
                 <button class="btn" onclick="entrar()">Entrar</button>
             </div>
