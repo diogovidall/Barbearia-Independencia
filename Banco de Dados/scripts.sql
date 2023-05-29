@@ -1,5 +1,13 @@
 create database BarbeariaIndependencia;
 use BarbeariaIndependencia;
+drop  table unidades;
+drop  table equipe;
+drop  table unidadeServicos;
+drop  table servicos;
+drop  table agendamento;
+drop  table cadastro;
+
+
 
 -- Tabela onde mostra todas as unidades da barbearia e seus lucros
 create table unidades (
@@ -56,6 +64,9 @@ create table unidadeServicos(
 idUnidadeServicos int,
 fkUnidades int,
 fkServicos int,
+mes varchar(45),
+constraint chkMes check(mes in('janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro')),
+totalClientes varchar(45),
 foreign key (fkUnidades) references unidades(idUnidades),
 foreign key (fkServicos) references servicos(idServicos),
 constraint pkAssociativa primary key (idUnidadeServicos, fkUnidades, fkServicos)
@@ -77,12 +88,13 @@ select * from equipe;
 insert into cadastro values
 (null, 'João', '84247484095', 'joao@gmail.com', 'joaogui123');
 select * from cadastro;
+truncate table cadastro;
 
 -- Inserindo dados na tabela agendamento
 -- Falta inserir mais dados por causa da API (Falta dados)
 insert into agendamento values 
 (1, 1, 1, 'Corte', '2023-06-20');
-select * from cadastro;
+select * from agendamento;
 
 -- inserindo dados na tabela servicos
 insert into servicos values
