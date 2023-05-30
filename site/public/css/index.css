@@ -287,7 +287,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
+.container-servicos img{
+    animation: slideServicos 30s linear infinite;
+}
+
+@keyframes slideServicos{
+0% {
+    transform: translateX(-100px);
+
+}
+
+100%{
+transform: translateX(-4998px);
+
+}
 }
 
 .imagem-servicos img {
@@ -299,17 +314,6 @@ body {
     -moz-box-shadow: 18px 21px 14px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 18px 21px 14px 0px rgba(0, 0, 0, 0.75);
     margin: 100px;
-}
-
-.preco {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: -250px;
-    margin-right: -90px;
-    opacity: 90%;
-    font-size: 30px;
-    color: white;
 }
 
 .agendamento {
@@ -356,7 +360,7 @@ body {
     position: absolute;
     margin-top: -270px;
     margin-left: 75%;
-    background-color: #9d9d9d;
+    background-color: azure;
     border-radius: 200px;
     padding: 40px;
 }
@@ -525,6 +529,5 @@ body {
 
 .link-cartao a:hover {
     transition: .4s ease-in-out;
-    opacity: 70%;
-
+    opacity: 50%;
 }

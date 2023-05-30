@@ -37,23 +37,6 @@ function nextImage() {
     document.getElementById("radio" + count).checked = true;
 }
 
-//Carousel serviços
-const imgs = document.getElementById("img");
-const img = document.querySelectorAll("#img img");
-
-let idx = 0;
-
-function carrosel() {
-    idx++;
-
-    if (idx > img.length - 1) {
-        idx = 0;
-    }
-    imgs.style.transform = `translateX(${-idx * 550}px)`;
-    imgs.style.transition = `.9s ease-in-out`;
-}
-setInterval(carrosel, 4000);
-
 //Web data Viz
 function cadastrar() {
     var nomeVar = nome_input.value;
