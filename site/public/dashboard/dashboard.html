@@ -4,41 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="dashboards.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all. min.css"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboards.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all. min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="../assets/logo-barbearia.jpg
+    <link rel="shortcut icon" href="../assets/logo-barbearia.jpg
         " type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Playfair+Display&display=swap"
-          rel="stylesheet">
-          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-          <title>Dashboard | Barbearia Independência</title>
-        </head>
-        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Dashboard | Barbearia Independência</title>
+</head>
+
 <body>
     <!-- Começo do Header -->
-            <header id="header">
-                <div class="navbar">
-                    <nav class="navbar">
-                        <ul class="header">
-                            <figure class="logo">
-                                <a href="../index.html">
-                                    <img src="../assets/logo-barbearia-semfundo.png" alt="Logo da barbearia">
-                                </a>
-                            </figure>
-                            <div class="dashboard-titulo">
-                                <span>
-                                    Dashboard | Barbearia Independência
-                                </span>
-                            </div>
-                    </nav>
-                </div>
-            </header>
-    
+    <header id="header">
+        <div class="navbar">
+            <nav class="navbar">
+                <ul class="header">
+                    <figure class="logo">
+                        <a href="../index.html">
+                            <img src="../assets/logo-barbearia-semfundo.png" alt="Logo da barbearia">
+                        </a>
+                    </figure>
+                    <div class="dashboard-titulo">
+                        <span>
+                            Dashboard | Barbearia Independência
+                        </span>
+                    </div>
+            </nav>
+        </div>
+    </header>
+
     <!-- Fim do Header -->
 
     <!-- Começo do corpo -->
@@ -81,27 +81,27 @@
                         <option value="outubro" id="outubro" class="option">Outubro</option>
                         <option value="novembro" id="novembro" class="option">Novembro</option>
                         <option value="dezembro" id="dezembro" class="option">Dezembro</option>
-                      </select> 
+                    </select>
                     <input placeholder="Quantidade de clientes nesse mês" type="number" id="input_clientela"><br>
-                    <button onclick="verClientela()">Ver clientela</button>
+                    <button onclick="inserirNovaClientela()">Ver clientela</button>
                 </div>
             </div>
-               <!-- Começo do Dashboard -->
-        <div id="corpo-dashboard">
-        <div class="div_dashboard">
-            <!-- Começo do dashboard -->
-            <canvas id="dashboard"></canvas>
-        </div>
-        </div>
+            <!-- Começo do Dashboard -->
+            <div id="corpo-dashboard">
+                <div class="div_dashboard">
+                    <!-- Começo do dashboard -->
+                    <canvas id="dashboard"></canvas>
+                </div>
+            </div>
         </div>
         <!-- Fim do Dashboard -->
-    </div   >
-        <!-- Fim do Corpo -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </div>
+    <!-- Fim do Corpo -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/scripts/dashboard.js"></script>
 </body>
 <script>
-var quantidadeClientela = [];
+    var quantidadeClientela = [];
 
     function verClientela() {
         var menosMovimento = document.getElementById('menos_movimento');
@@ -113,19 +113,19 @@ var quantidadeClientela = [];
         console.log("Mes: " + mesEscolhido);
         console.log("Quantidade de clientes: " + clientelaMes);
 
-        if(mesEscolhido == ''|| clientelaMes == ''){
+        if (mesEscolhido == '' || clientelaMes == '') {
             console.log("Não foi escolhido nenhum valor")
             Swal.fire({
                 icon: 'error',
                 title: 'Não encontramos os valores necessários para atualizar o Dashboard.',
                 text: 'Verifique se preencheu todos os campos.',
-              })
-        } else{
+            })
+        } else {
             quantidadeClientela.push(clientelaMes);
             console.log(quantidadeClientela)
+
         }
-
-
     }
 </script>
+
 </html>

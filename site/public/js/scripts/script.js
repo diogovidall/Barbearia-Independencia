@@ -46,16 +46,20 @@ function cadastrar() {
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
     if (nomeVar == "" || cpfVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-        Swal.fire(
-            'Não está conseguindo realizar seu cadastro?',
-            'Certifique-se que todos os campos estejam preenchidos',
-            'question'
-        );
+        Swal.fire({
+            icon: 'warning',
+            title: 'Erro ao fazer o cadastro',
+            background: '#181818',
+            color: 'white',
+            text: 'Preencha todos os campos corretamente.',
+        });
         return false;
     } else if (senhaVar != confirmacaoSenhaVar) {
         Swal.fire({
             icon: 'error',
-            title: 'Erro ao fazer o cadastro',
+            title: 'Erro ao fazer o login',
+            background: '#181818',
+            color: 'white',
             text: 'Preencha todos os campos corretamente.',
         });
         return false;
@@ -109,11 +113,13 @@ function entrar() {
     var senhaVar = senha_input_login.value;
 
     if (emailVar == "" || senhaVar == "") {
-        Swal.fire(
-            'Erro ao realizar o login?',
-            'Certifique-se que já tenha feito o cadastro.',
-            'question'
-        );
+        Swal.fire({
+            icon: 'warning',
+            title: 'Erro ao fazer o login?',
+            background: '#181818',
+            color: 'white',
+            text: 'Preencha todos os campos corretamente.',
+        });
         return false;
     } else {
         let timerInterval
@@ -121,6 +127,8 @@ function entrar() {
             title: 'Entrando em sua conta, por favor aguarde...',
             html: 'Mensagem fechando em <b></b> segundos.',
             timer: 3000,
+            background: '#181818',
+            color: 'white',
             timerProgressBar: true,
             didOpen: () => {
                 Swal.showLoading()
@@ -179,6 +187,8 @@ function entrar() {
                 Swal.fire({
                     icon: 'error',
                     title: 'Erro ao fazer o login',
+                    background: '#181818',
+                    color: 'white',
                     text: texto,
                 });
 

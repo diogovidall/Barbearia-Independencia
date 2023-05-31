@@ -56,6 +56,9 @@ create table unidadeServicos(
 idUnidadeServicos int,
 fkUnidades int,
 fkServicos int,
+mes varchar(45),
+constraint chkMes check(mes in('janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro')),
+totalClientes varchar(45),
 foreign key (fkUnidades) references unidades(idUnidades),
 foreign key (fkServicos) references servicos(idServicos),
 constraint pkAssociativa primary key (idUnidadeServicos, fkUnidades, fkServicos)

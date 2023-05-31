@@ -1,6 +1,9 @@
+// Essa parte definimos se usaremos o banco de dados na nuvem ou localmente.
 process.env.AMBIENTE_PROCESSO = "desenvolvimento";
 // process.env.AMBIENTE_PROCESSO = "producao";
 
+
+// Importando módulos
 var express = require("express");
 var cors = require("cors");
 var path = require("path");

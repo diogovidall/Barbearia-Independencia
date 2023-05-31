@@ -49,6 +49,8 @@ validarBtn.addEventListener("click", function validar() {
                 position: 'top-end',
                 icon: 'success',
                 title: 'Vale independência completado com sucesso!',
+                background: '#181818',
+                color: 'white',
                 showConfirmButton: false,
                 timer: 1500
               })
@@ -59,6 +61,8 @@ validarBtn.addEventListener("click", function validar() {
             icon: 'error',
             title: 'Oops...',
             text: '  Não foi possível achar no sistema seu cadastro!',
+            background: '#181818',
+            color: 'white',
             footer: '<a href="./cadastro.html">Faça o cadastro para completar seu vale independênica.</a>'
           })
       
