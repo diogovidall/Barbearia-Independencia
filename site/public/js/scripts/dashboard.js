@@ -8,14 +8,15 @@ setTimeout(() => {
   obterDadosGrafico();
 }, 1000);
 
-
+var dadosGraficos = [];
 function obterDadosGrafico() {
-// Fazendo conexão do back-end com o front-end
+  // Fazendo conexão do back-end com o front-end
   fetch(`/medidas/ultimas`).then(function (response) {
 
     if (response.ok) {
       response.json().then(function (resposta) {
         console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+        dadosGraficos.push(...resposta);
         plotarGrafico(resposta);
       });
     } else {
@@ -23,11 +24,16 @@ function obterDadosGrafico() {
     }
   })
 
-  // Bloco de teste para caso não seja obtido nenhum dado
+    // Bloco de teste para caso não seja obtido nenhum dado
     .catch(function (error) {
       console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
     });
+
 }
+
+
+
+console.log(dadosGraficos);
 
 function plotarGrafico(resposta) {
 
@@ -74,43 +80,83 @@ function plotarGrafico(resposta) {
 
 };
 
+// Listas onde guarda todos os meses e clientelas
+mesClientela = [];
+listaMeses = [];
 
 function inserirNovaClientela() {
-
+  
   var mesVar = document.getElementById("escolhaMes").value;
   var qtdClientesVar = document.getElementById("input_clientela").value;
+  
+    
+
+  if (qtdClientesVar == "" || qtdClientesVar < 0) {
+    Swal.fire({
+      icon: 'warning',
+      title: 'Houve algo de errado ao inserir os dados!',
+      background: '#181818',
+      color: 'white',
+      text: 'Preencha todos os campos corretamente.',
+    });
+    return;
+  }
+
+  //Percorrendo lista dos meses para não o usuario não repetir
+  for (let index = 0; index < listaMeses.length; index++) {
+    var posicaoMeses = listaMeses[index];
+    console.log(posicaoMeses);
+    console.log(mesVar)
+    if (posicaoMeses == mesVar) {
+      console.log("Mês repetiu");
+      Swal.fire({
+        icon: 'warning',
+        title: 'Cuidado! Você ja inseriu dados nesse mês.',
+        background: '#181818',
+        color: 'white',
+        text: 'Escolha outro mês para adicionar a clientela',
+      });
+      return;
+    }
+  }
+
+  //Jogando valores da input para as listas
+  mesClientela.push({
+    mesVar: mesVar,
+    qtdClientesVar: qtdClientesVar
+  })
+
 
   verClientela()
-
   fetch("/medidas/inserirClientela", {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-          mesServer: mesVar,
-          qtdClientesServer: qtdClientesVar,
-      })
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      mesServer: mesVar,
+      qtdClientesServer: qtdClientesVar,
+    })
   }).then(function (resposta) {
-      if (resposta.ok) {
-          console.log(resposta);
-          Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Valores Inseridos com Sucesso!',
-            background: '#181818',
-            color: 'white',
-            showConfirmButton: false,
-            timer: 1500
-          })
+    if (resposta.ok) {
+      console.log(resposta);
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Valores Inseridos com Sucesso!',
+        background: '#181818',
+        color: 'white',
+        showConfirmButton: false,
+        timer: 1500
+      })
 
-          
-      } else {
-          throw new Error("Houve um erro ao inserir os dados!");
-      }
+    } else {
+      throw new Error("Houve um erro ao inserir os dados!");
+    }
   }).catch(function (resposta) {
-      console.log(`#ERRO: ${resposta}`);
+    console.log(`#ERRO: ${resposta}`);
   });
 
   return false;
+
 }
