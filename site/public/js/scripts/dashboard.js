@@ -16,6 +16,31 @@ function obterDadosGrafico() {
     if (response.ok) {
       response.json().then(function (resposta) {
         console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+        var menorMovimento = resposta[0].totalClientes;
+        var maiorMovimento = resposta[0].totalClientes;
+        var mesMenor = resposta[0].mes;
+        var mesMaior = resposta[0].mes;
+
+        for (let index = 0; index < resposta.length; index++) {
+
+          if (menorMovimento > resposta[index].totalClientes) {
+            menorMovimento = resposta[index].totalClientes;
+            mesMenor = resposta[index].mes;
+          }
+
+          if (maiorMovimento < resposta[index].totalClientes) {
+            maiorMovimento = resposta[index].totalClientes;
+            mesMaior = resposta[index].mes;
+          }
+        }
+
+        var menosMovimento = document.getElementById('menos_movimento');
+        var maisMovimento = document.getElementById('mais_movimento');
+        menosMovimento.innerHTML = `${mesMenor} - ${menorMovimento}`;
+        maisMovimento.innerHTML = `${mesMaior} - ${maiorMovimento}`;
+
+
         dadosGraficos.push(...resposta);
         plotarGrafico(resposta);
       });
@@ -85,11 +110,9 @@ mesClientela = [];
 listaMeses = [];
 
 function inserirNovaClientela() {
-  
+
   var mesVar = document.getElementById("escolhaMes").value;
   var qtdClientesVar = document.getElementById("input_clientela").value;
-  
-    
 
   if (qtdClientesVar == "" || qtdClientesVar < 0) {
     Swal.fire({
@@ -105,8 +128,10 @@ function inserirNovaClientela() {
   //Percorrendo lista dos meses para não o usuario não repetir
   for (let index = 0; index < listaMeses.length; index++) {
     var posicaoMeses = listaMeses[index];
+
     console.log(posicaoMeses);
     console.log(mesVar)
+
     if (posicaoMeses == mesVar) {
       console.log("Mês repetiu");
       Swal.fire({
@@ -119,13 +144,6 @@ function inserirNovaClientela() {
       return;
     }
   }
-
-  //Jogando valores da input para as listas
-  mesClientela.push({
-    mesVar: mesVar,
-    qtdClientesVar: qtdClientesVar
-  })
-
 
   verClientela()
   fetch("/medidas/inserirClientela", {
