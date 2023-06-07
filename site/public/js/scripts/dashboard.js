@@ -144,6 +144,7 @@ function inserirNovaClientela() {
       return;
     }
   }
+  listaMeses.push(mesVar);
 
   verClientela()
   fetch("/medidas/inserirClientela", {

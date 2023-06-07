@@ -15,9 +15,9 @@ body {
 }
 
 .music-site {
-  position: relative;
+  position: fixed;
   left: 3%;
-  top: -23%;
+  top: 3%;
   border-radius: 100px;
   background-color: #191919;
   -webkit-box-shadow: 18px 21px 14px 0px rgba(0, 0, 0, 0.75);
