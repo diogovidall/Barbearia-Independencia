@@ -13,7 +13,6 @@ const bloco9 = document.getElementById("block9");
 const blocos = [bloco1, bloco2, bloco3, bloco4, bloco5, bloco6, bloco7, bloco8, bloco9];
 
 var numeroDoBloco = 0;
-
 var dataCorte = [];
 
 
@@ -28,6 +27,13 @@ validarBtn.addEventListener("click", function validar() {
         var dataLista = dataCorte[i].data;
         if(dataLista == data){
             existe = true;
+            Swal.fire({
+                icon: 'warning',
+                title: 'Oops...',
+                text: 'Não pode adicionar a mesma data para preencher o vale independência!',
+                background: '#181818',
+                color: 'white'
+              })
             break;
         } 
     }
