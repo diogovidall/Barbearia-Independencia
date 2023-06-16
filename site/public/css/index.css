@@ -197,16 +197,21 @@ body {
 }
 
 .logo-barbearia {
-    width: 550px;
-    margin-left: 950px;
-    margin-bottom: -530px;
+    width: 450px;
+    position: relative;
+    left: 72%;
+    margin-top: -400px;
     opacity: 90%;
 }
 
 .container-barbearia {
-    margin-top: 60px;
-    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 15%;
+    margin-top: 100px;
 }
+
 
 .container-barbearia hr {
     width: 55%;
@@ -214,12 +219,10 @@ body {
 }
 
 .imagem-cesao {
-    width: 750px;
-    height: 1000px;
+    width: 600px;
+    height: 800px;
     border-radius: 50px;
     opacity: 80%;
-    margin-top: 50px;
-    margin-left: 30px;
     -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
@@ -245,20 +248,19 @@ body {
 .div-texto-home {
     display: flex;
     flex-direction: row;
-    justify-content: space-between
+    justify-content: space-evenly;
 }
 
 .div-texto-home span {
-    font-size: 45px;
+    font-size: 40px;
     opacity: 80%;
     color: white;
     display: flex;
     align-items: flex-end;
     flex-direction: row;
-    justify-content: flex-end;
     width: 50%;
-    margin-right: 20px;
-    margin-bottom: 40px;
+    position: relative;
+left: 5%;
     text-align: justify;
 
 }
@@ -289,20 +291,20 @@ body {
     align-items: center;
 }
 
-.container-servicos img{
+.container-servicos img {
     animation: slideServicos 30s linear infinite;
 }
 
-@keyframes slideServicos{
-0% {
-    transform: translateX(-100px);
+@keyframes slideServicos {
+    0% {
+        transform: translateX(-100px);
 
-}
+    }
 
-100%{
-transform: translateX(-4998px);
+    100% {
+        transform: translateX(-4998px);
 
-}
+    }
 }
 
 .imagem-servicos img {
