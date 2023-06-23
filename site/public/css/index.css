@@ -90,8 +90,10 @@ body {
     height: 700px;
     overflow: hidden;
     border-radius: 10px;
-
-
+    background-color: #121212;
+    -webkit-box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .slides {
@@ -207,9 +209,11 @@ body {
 .container-barbearia {
     display: flex;
     align-items: center;
-    position: relative;
-    right: 15%;
-    margin-top: 100px;
+    margin-top: 200px;
+    background-color: #121212;
+    -webkit-box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 
@@ -232,12 +236,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    right: 15%;
+    margin-bottom: 5%;
 }
 
 .music-site {
-    position: relative;
-    left: 81%;
-    top: -8%;
+    position: fixed;
+    left: 1%;
     border-radius: 100px;
     background-color: #191919;
     -webkit-box-shadow: 18px 21px 14px 0px rgba(0, 0, 0, 0.75);
@@ -260,11 +266,13 @@ body {
     flex-direction: row;
     width: 50%;
     position: relative;
-left: 5%;
+    left: 5%;
     text-align: justify;
 
 }
 
+
+/* Serviços */
 
 .titulo-servicos {
     font-size: 100px;
@@ -281,6 +289,10 @@ left: 5%;
 
 #servicos {
     margin-top: 300px;
+    background-color: #121212;
+    -webkit-box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 
@@ -325,7 +337,7 @@ left: 5%;
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 26px;
-
+    margin-top: 100px;
 }
 
 #agendamento hr {
@@ -339,34 +351,52 @@ left: 5%;
     margin-top: 20px;
     border-radius: 5px;
     opacity: 30%;
+    margin-right: 26px;
+    background-color: #121212;
+    -webkit-box-shadow: 1px 20px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 20px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 20px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.link-agendamento {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.link-agendamento a{
+    text-decoration: none;
+    color: #121212;
+}
+
+.btn-agendamento {
+    display: flex;
+    font-size: 50px;
+    margin-right: 70px;
+    margin-top: -13%;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 60%;
+    background-color: white;
+    border: 3px solid black;
     -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
 }
 
-.link-agendamento {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -80px;
+.btn-agendamento:hover{
+    transition: .7s ease-in-out;
+    transform: scale(1.05);
+    opacity: 90%;
+    background-color: white;
+    -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
 }
 
 
-.link-agendamento a:hover {
-    transition: .4s ease-in-out;
-    opacity: 70%;
-}
-
-.btn-agendamento {
-    position: absolute;
-    margin-top: -270px;
-    margin-left: 75%;
-    background-color: azure;
-    border-radius: 200px;
-    padding: 40px;
-}
-
+/* Contatos */
 .contato {
     display: flex;
     align-items: center;
@@ -445,7 +475,12 @@ left: 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 173px;
+    position: relative;
+    margin-top: 15%;
+    background-color: #121212;
+    -webkit-box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -15px 12px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .div-texto-cartao {
@@ -455,81 +490,78 @@ left: 5%;
 }
 
 .div-texto-cartao img {
-    width: 750px;
-    height: 900px;
+    position: relative;
+    width: 600px;
+    height: 700px;
     border-radius: 50px;
-    opacity: 60%;
-    margin-left: 20px;
+    opacity: 80%;
+    left: 15%;
+    margin-bottom: 70px;
     -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
 }
 
 .div-texto-cartao h1 {
-    font-size: 70px;
-    opacity: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
     position: absolute;
-    left: 51%;
+    left: 60.5%;
+    top: 10%;
+    font-size: 75px;
+    opacity: 70%;
+}
+
+.vale_textos {
+    display: flex;
+    flex-direction: row;
 }
 
 .div-texto-cartao span {
-    font-size: 50px;
+    font-size: 40px;
     opacity: 80%;
+    width: 50%;
+    left: 39%;
+    bottom: 40%;
     color: white;
     display: flex;
     align-items: flex-end;
     flex-direction: row;
-    justify-content: flex-end;
-    width: 47%;
-    margin-bottom: 310px;
+    position: relative;
 
 }
-
-.div-texto-cartao h1 {
-    font-size: 65px;
-    opacity: 70%;
-    color: white;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: center;
-    width: 48%;
-    margin-right: -824px;
-    margin-top: 202px;
-
-}
-
 
 
 .link-cartao {
     list-style: none;
-
 }
 
-.link-cartao li {
+
+.vale_textos a {
     display: flex;
-    margin-top: 650px;
-    margin-left: -620px;
-}
-
-.link-cartao a {
     position: absolute;
-    left: 68%;
-    margin-top: -125px;
-    font-size: 50px;
-    color: whitesmoke;
+    left: 60.5%;
+    margin-top: 28%;
+    font-size: 40px;
+    color: #121212;
     text-decoration: none;
     border: 3px solid black;
-    background-color: #121212;
-    border-radius: 20px;
+    background-color: white;
+    border-radius: 10px;
     padding: 15px;
-    opacity: 90%;
+    opacity: 70%;
     -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
 }
 
 .link-cartao a:hover {
-    transition: .4s ease-in-out;
+    transition: .6s ease-in-out;
     opacity: 50%;
+    color: white;
+    background-color: #121212;
+    -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
 }
