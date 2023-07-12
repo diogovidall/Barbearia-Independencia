@@ -60,9 +60,28 @@ function cadastrar() {
             title: 'Erro ao fazer o login',
             background: '#181818',
             color: 'white',
+            text: 'As duas senhas não se coincidem!',
+        });
+        return false;
+    } else if (cpfVar.length < 11 || cpfVar.length > 11) {
+        Swal.fire({
+            icon: 'error',
+            title: 'O CPF precisa ter 11 caracteres',
+            background: '#181818',
+            color: 'white',
             text: 'Preencha todos os campos corretamente.',
         });
         return false;
+    } else if (isNaN(cpfVar)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'O CPF não pode possuir letras',
+            background: '#181818',
+            color: 'white',
+            text: 'Preencha todos os campos corretamente.',
+        });
+        return false;
+
     }
 
     // Enviando o valor da nova input
@@ -126,7 +145,7 @@ function entrar() {
         Swal.fire({
             title: 'Entrando em sua conta, por favor aguarde...',
             html: 'Mensagem fechando em <b></b> segundos.',
-            timer: 3000,
+            timer: 1000,
             background: '#181818',
             color: 'white',
             timerProgressBar: true,
@@ -146,6 +165,11 @@ function entrar() {
                 console.log('I was closed by the timer')
             }
         });
+               
+        setTimeout(function () {
+            window.open("https://booksy.com/pt-br/174888_barbearia-independencia-sp_barbearias_1047773_sao-paulo", "_blank");
+        }, 2000);
+        console.log("Estou no Timeout do Booksy ");
     }
 
     console.log("FORM LOGIN: ", emailVar);
@@ -174,9 +198,11 @@ function entrar() {
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
 
+                //Realizando os redirecionamentos
                 setTimeout(function () {
-                    window.location = "./index.html";
-                }, 1000);
+                    window.location = "../index.html";
+                }, 2000);
+                console.log("Estou do Timeout do Index");
 
             });
 

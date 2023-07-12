@@ -358,43 +358,27 @@ body {
     box-shadow: 1px 20px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.link-agendamento {
+.divQuemSomos {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    list-style: none;
 }
 
-.link-agendamento a{
-    text-decoration: none;
-    color: #121212;
-}
-
-.btn-agendamento {
+.textoQuemSomos {
     display: flex;
     font-size: 50px;
-    margin-right: 70px;
-    margin-top: -13%;
-    border-radius: 10px;
-    padding: 10px;
-    opacity: 60%;
-    background-color: white;
-    border: 3px solid black;
-    -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+    margin-right: 30px;
+margin-top: -47%;
+border-radius: 10px;
+padding: 10px;
+opacity: 60%;
+background-color: white;
+border: 3px solid black;
+-webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+-moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
+width: 30%;
 }
-
-.btn-agendamento:hover{
-    transition: .7s ease-in-out;
-    transform: scale(1.05);
-    opacity: 90%;
-    background-color: white;
-    -webkit-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 15px 18px 31px 0px rgba(0, 0, 0, 0.75);
-}
-
 
 /* Contatos */
 .contato {
